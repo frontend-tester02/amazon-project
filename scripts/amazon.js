@@ -85,7 +85,13 @@ productBtns.forEach((button) => {
 
     }
 
-    console.log(cart);
+    let cartQuantity = 0
 
+    cart.forEach((item) => {
+      cartQuantity += item.quantity;
+    })
+
+    const cartCount = document.querySelector('.js-cart-quantity');
+    cartCount.innerHTML = cartQuantity;
   })
 })
